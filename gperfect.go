@@ -27,7 +27,7 @@ func calcPerfect(uNumTest uint64, uNumCores uint) {
 	uHalf := uNumTest / 2
 
 	// If the domain of possible numbers is > 100,000,000 then split it up on multiple threads
-	if uNumTest < 100 {
+	if uNumTest < 100000000 {
 		for i = 1; i <= uHalf; i++ {
 			if uNumTest%i == 0 {
 				uCalc += i
